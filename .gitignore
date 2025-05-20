@@ -12,3 +12,5 @@ instance/
 .ipynb_checkpoints/
 *.log
 *.tmp
+# also add uploads folder here
+/uploads
