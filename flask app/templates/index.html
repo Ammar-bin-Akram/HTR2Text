@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handwriting Recognition</title>
+</head>
+<body>
+    <h1>Upload an image</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <label for="image-upload">Choose an image to upload:</label>
+        <input type="file" id="image-upload" name="image" required title="Upload an image file">
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if image_path %}
+        <h2>Predicted Text:</h2>
+        <p>{{ prediction }}</p>
+        <img src="{{ image_path }}" height="200" alt="Uploaded handwriting image">
+    {% endif %}
+</body>
+</html>
