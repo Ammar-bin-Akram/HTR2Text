@@ -12,7 +12,7 @@ app = Flask(__name__)
 UPLOAD_FOLDER = 'static/uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-model_path = r"D:\flask app\model\new-model.h5"
+model_path = r"flask app/model/new-model.h5"
 
 if not os.path.exists(model_path):
     raise FileNotFoundError(f"Model file not found: {model_path}")
